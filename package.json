@@ -1,0 +1,50 @@
+{
+  "name": "dbdiconsremaster",
+  "version": "1.0.0",
+  "description": "Replacement tool for DBD Toolbox.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "build": "electron-builder build --mac --publish never",
+    "deploy": "electron-builder build --mac --publish always"
+  },
+  "author": "levalentin_",
+  "license": "ISC",
+  "dependencies": {
+    "@electron-forge/maker-wix": "^6.4.2",
+    "ejs": "^3.1.9",
+    "ejs-electron": "^2.1.1",
+    "electron-builder": "^24.6.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^6.1.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^27.0.2",
+    "electron-wix-msi": "^5.0.0"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-wix",
+          "config": {
+            "manufacturer": "ImTiiTii Community"
+          }
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Va-lentin/DBDIconsRemaster.git"
+  }
+}
